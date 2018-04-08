@@ -12,14 +12,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+     let that = this
+     const id = options.id;
+      wx.request({
+        url: 'https://m.maoyan.com/movie/' + id + '.json',
+        success(res){
+          let detail = res.data.data.MovieDetailModel;
+            that.setData({
+              detail:detail
+            })
+        }
+      })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    wx.setNavigationBarTitle({
+      title: '详情页',
+    })
   },
 
   /**

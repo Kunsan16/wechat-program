@@ -1,2 +1,7 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class='container'>
+    
+   <view class='movie-cover'>
+             <image src='{{detail.img}}' class='movie-cover' />
+   </view>
+</view>
