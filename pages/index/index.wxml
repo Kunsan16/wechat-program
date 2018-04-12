@@ -1,39 +1,37 @@
 <!--index.wxml-->
 
 <view class='container'>
-   <swiper indicator-dots="{{indicatorDots}}" class="swiper"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{banner}}" wx:key="key">
-  <swiper-item>  
-      <image src="{{item.image}}"  model="aspectFit" class="swiper image "/>  
-  </swiper-item>  
-  </block>
-</swiper>
+  <swiper indicator-dots="{{indicatorDots}}" class="swiper" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banner}}" wx:key="key">
+      <swiper-item>
+        <image src="{{item.image}}" model="aspectFit" class="swiper image " />
+      </swiper-item>
+    </block>
+  </swiper>
 
-<view class="movie-item-container">
-   <block wx:for="{{list}}" wx:for-index="id" wx:key="key">
- <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>
-  
- 
+  <view class="movie-item-container">
+    <block wx:for="{{list}}" wx:for-index="id" wx:key="key">
+      <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>
+      
       <view class='movie-item' data-id='{{item.id}}' bindtap='bindDetail'>
-          <view class='movie-item-left'>
-             <image src='{{item.img}}' class='movie-image'/>
+        <view class='movie-item-left'>
+          <image src='{{item.img}}' class='movie-image' />
+        </view>
+        <view class='movie-item-right'>
+          <text class='movie-item-title'>{{item.nm}}</text>
+          <view class='type'>
+            {{item.cat}}
           </view>
-          <view class='movie-item-right'>
-             <text class='movie-item-title'>{{item.nm}}</text>
-         <view class='type'>
-						{{item.cat}}
-					</view>
-            <view class='type'>
-						{{item.rt}}
-					</view>
-					<view class='wish'>
-						{{item.showInfo}}
-					</view>
-         </view>
+          <view class='type'>
+            {{item.rt}}
+          </view>
+          <view class='wish'>
+            {{item.showInfo}}
+          </view>
+        </view>
       </view>
 
 
-   </block>
-</view>
+    </block>
+  </view>
 </view>

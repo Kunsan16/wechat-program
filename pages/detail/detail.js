@@ -14,14 +14,17 @@ Page({
   onLoad: function (options) {
      let that = this
      const id = options.id;
+     console.log(id)
       wx.request({
         url: 'https://m.maoyan.com/movie/' + id + '.json',
+        
         success(res){
           let detail = res.data.data.MovieDetailModel;
             that.setData({
               detail:detail
             })
         }
+        
       })
   },
 

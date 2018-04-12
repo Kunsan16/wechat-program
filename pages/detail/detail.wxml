@@ -1,7 +1,26 @@
 <!--pages/detail/detail.wxml-->
-<view class='container'>
-    
-   <view class='movie-cover'>
-             <image src='{{detail.img}}' class='movie-cover' />
-   </view>
+<view>
+
+  <view style='width:100%;height:200px;background-image: url("{{detail.img}}");background-repeat: no-repeat;background-size: 400%;position:absolute;z-index:-1;opacity:1;filter: blur(10px);'>
+  </view>
+
+  <view class='movie-top'>
+    <view class='clearfix'>
+      <view class='left pull-left'>
+        <image src='{{detail.img}}'></image>
+      </view>
+
+      <view class='right pull-left'>
+        <view>
+          <text style='color:orange;font-size:16px;'>{{detail.nm}}</text>
+        </view>
+        <view class='text'>导演 {{detail.dir}}</view>
+          <view class='text'>类型 {{detail.cat}}</view>
+            <view class='text'>地区 {{detail.src}}</view>
+             <view class='text'>片长 {{detail.dur}}</view>
+              <view class='text'>上映 {{detail.rt}}</view>
+              <view class='text'>评分 {{detail.sc}}</view>
+      </view>
+    </view>
+  </view>
 </view>
