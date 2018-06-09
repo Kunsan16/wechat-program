@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.6.0",
 	"appid": "touristappid",
-	"projectname": "FirstWx",
+	"projectname": "FirstWxPratece",
 	"condition": {
 		"search": {
 			"current": -1,

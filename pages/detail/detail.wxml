@@ -14,13 +14,21 @@
         <view>
           <text style='color:orange;font-size:16px;'>{{detail.nm}}</text>
         </view>
-        <view class='text'>导演 {{detail.dir}}</view>
-          <view class='text'>类型 {{detail.cat}}</view>
-            <view class='text'>地区 {{detail.src}}</view>
-             <view class='text'>片长 {{detail.dur}}</view>
-              <view class='text'>上映 {{detail.rt}}</view>
-              <view class='text'>评分 {{detail.sc}}</view>
+        <view class='text_det'>导演 {{detail.dir}}</view>
+        <view class='text_det'>类型 {{detail.cat}}</view>
+        <view class='text_det'>地区 {{detail.src}}</view>
+        <view class='text_det'>片长 {{detail.dur}}</view>
+        <view class='text_det'>上映 {{detail.rt}}</view>
+        <view class='text_det'>评分 {{detail.sc}}</view>
       </view>
     </view>
   </view>
+<view class="info">
+		<view class='text'>
+			<text style='{{hideText ? "-webkit-line-clamp: 2" : ""}}'>{{detail.dra}}</text>
+		</view>
+		<view class='controlText {{hideClass}}' bindtap='toggleText'>
+			<text></text>
+		</view>
+	</view>
 </view>

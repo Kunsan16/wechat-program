@@ -37,11 +37,13 @@ Page({
         'content-type': 'application/json'
       },
       success(res){
-     
+          console.log(res)
+          let list = that.data.list;
+          list = list.concat(res.data.data.movies);
           that.setData({
            // banner: imgUrls,
-            
-            list: [{ header: '热门电影' }].concat(res.data.data.movies)
+        
+            list: list
           })
       }
     })

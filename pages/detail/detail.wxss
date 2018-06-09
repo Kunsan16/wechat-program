@@ -63,8 +63,41 @@
   clear: both;
 }
 
-.text {
+.text_det {
   color: white;
   font-size: 12px;
   padding-top: 2px;
+}
+
+
+
+.info .text{
+	transition: 1s;
+}
+
+.info .text text{
+	padding:5px;
+	font-size:14px;
+	overflow: hidden;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    transition: 1s;
+}
+.controlText{
+	text-align: center;
+}
+.controlText text{
+	display:inline-block;
+	width:28px;
+	height:20px;
+}
+.controlText text:after{
+	content:'';
+	display: block;
+	width:10px;
+	height:10px;
+	border: 1px solid;
+	border-left-width: 0;
+	border-top-width: 0;
+	transform: rotate(45deg);
 }
